@@ -16,7 +16,7 @@ const Cta = ({ slice }) => {
         <div className="max-w-lg">{text}</div>
 
         <Link
-          href={button?.url || "#"}
+          href={button?.url || "/contact-us"}
           className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal"
         >
           Schedule a call

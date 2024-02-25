@@ -15,7 +15,7 @@ const variantsLeft: Variants = {
     opacity: 1,
     x: "0%",
     transition: {
-      duration: 1.5,
+      duration: 3.5,
     },
   },
   exit: {
@@ -38,9 +38,17 @@ const variantsRight: Variants = {
     opacity: 1,
     x: "0%",
     transition: {
-      duration: 1.5,
+      duration: 3.5,
     },
   },
+  stay: {
+	opacity: 1,
+	x: "0%",
+	transition : {
+	   duration: 2,
+	},
+  },
+
   exit: {
     opacity: 0,
     y: 100,
@@ -58,21 +66,30 @@ type QuestionsProps = {
 function Questions({ data }: QuestionsProps) {
   const [offset, setOffset] = useState(0);
   const controls = useAnimation();
-  const repeatDelay = 8000;
+  const repeatDelay = 12000;
 
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
     const show = () => {
       interval = setInterval(async () => {
         setOffset((prev) => (prev + 1) % data.length);
+	try {
         await controls.start("initial");
         await controls.start("slide");
-        setTimeout(() => {
-          controls.start("exit");
-        }, 5000);
+	await controls.start("stay");
+	setTimeout(async () => {
+          await controls.start("exit");
+        }, 3000);
+	}
+	catch (error) {
+	}
       }, repeatDelay);
+
+      
     };
     show();
+
+	
 
     return () => clearInterval(interval);
   }, [controls, repeatDelay, data.length]);

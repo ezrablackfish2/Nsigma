@@ -1,0 +1,27 @@
+{
+  "id": "slice1",
+  "type": "SharedSlice",
+  "name": "Slice1",
+  "description": "Slice1",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "slice_1_image": {
+          "type": "Image",
+          "config": {
+            "label": "slice 1 image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

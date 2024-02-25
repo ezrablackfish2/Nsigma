@@ -111,7 +111,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-2">
               <li>
                 <Link
-                  href="https://nsigma.io/#expertise"
+                  href="/#"
                   className="text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
                   Data Strategy & Consulting
@@ -127,15 +127,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://nsigma.io/#expertise"
+                  href="/totalops"
                   className="text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
-                  DataOps Services
+                   TotalOps : Data, ML and Security
                 </Link>
               </li>
               <li>
                 <Link
-                  href="https://nsigma.io/#expertise"
+                  href="/data-engineering"
                   className="text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
                   Data Engineering
@@ -143,7 +143,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://nsigma.io/#expertise"
+                  href="/software-development"
                   className="text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
                   Software Development
@@ -151,7 +151,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/Automation-analytics"
                   className="text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
                   BI Automation & Data Analytics
@@ -166,7 +166,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-2">
               <li>
                 <Link
-                  href="https://nsigma.io/"
+                  href="/nsigma-story"
                   className="text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
                   Our Story

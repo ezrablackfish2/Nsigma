@@ -6,10 +6,10 @@
   "status": true,
   "json": {
     "Main": {
-      "hero_video": {
+      "ai_video": {
         "type": "Link",
         "config": {
-          "label": "Hero Video",
+          "label": "AI video",
           "placeholder": "",
           "select": "media"
         }
@@ -203,18 +203,22 @@
           "label": "Content",
           "repeat": true,
           "fields": {
-            "title": {
-              "type": "Text",
+            "topic": {
+              "type": "StructuredText",
               "config": {
-                "label": "Title",
-                "placeholder": ""
+                "label": "Topic",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
             },
-            "description": {
-              "type": "Text",
+            "content": {
+              "type": "StructuredText",
               "config": {
-                "label": "Description",
-                "placeholder": ""
+                "label": "content",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
             }
           }

@@ -8,6 +8,10 @@ import EngagementStrategies from "@/components/engagement-strategies/EngagementS
 import Expertise from "@/components/expertise";
 import AboutUs from "@/components/about-us/AboutUs";
 import Banner from "@/components/banner";
+import { PrismicRichText } from "@prismicio/react";
+
+
+
 
 const Home: FC<any> = ({ page }) => {
   const {

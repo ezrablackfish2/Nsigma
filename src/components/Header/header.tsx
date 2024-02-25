@@ -7,16 +7,21 @@ import MenuItemWithSubMenu from "./MenuItemWithSubMenu";
 const routes = [
   {
     name: "Our Expertise",
-    link: "https://nsigma.io/#expertise",
-    sublinks: [{ name: "AI/ML", link: "/ai-ml" }],
+    link: "/#expertise",
+    sublinks: [
+    	{ name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
+	{ name: "TotalOps: Data, ML & Security", link: "/totalops" },
+	{ name: "Data Engineering", link: "/data-engineering" },
+	{ name: "Software Development", link: "/software-development" },
+	],
   },
   {
     name: "Case Studies",
-    link: "https://nsigma.io/#casestudy",
+    link: "/#casestudy",
   },
   {
     name: "About Us",
-    link: "https://nsigma.io/#about",
+    link: "/#about",
   },
   {
     name: "Contact Us",
@@ -87,6 +92,7 @@ function Navbar() {
                   i === routes.length - 1 &&
                     "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl hover:scale-105 transition-transform"
                 )}
+		
               >
                 {name}
               </Link>
@@ -103,8 +109,10 @@ function Navbar() {
                       href={link}
                       key={name}
                       className={twMerge(
-                        `p-2 md:text-lg text-base font-semibold text-white uppercase`
+                        `p-2 md:text-sm text-base font-semibold text-white uppercase`,
+              		'hover:bg-blue-100 hover:bg-opacity-20'
                       )}
+		      
                     >
                       {name}
                     </Link>
@@ -154,6 +162,7 @@ function Navbar() {
                 <MenuItemWithSubMenu
                   key={i}
                   item={{ name, link, subMenuItems: sublinks }}
+
                   toggleOpen={setOpen}
                 />
               ) : (
@@ -166,6 +175,7 @@ function Navbar() {
                       "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl"
                   )}
                   onClick={handleOpen}
+		  style={{marginBottom: '-10px'}}
                 >
                   {name}
                 </Link>

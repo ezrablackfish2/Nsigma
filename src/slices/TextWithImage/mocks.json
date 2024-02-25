@@ -57,6 +57,20 @@
 							"value": "bank",
 							"type": "Text"
 						}
+					],
+					[
+						"content",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Aute cillum enim officia cillum occaecat sint incididunt. Culpa aute excepteur minim culpa non qui in."
+									}
+								}
+							]
+						}
 					]
 				]
 			}

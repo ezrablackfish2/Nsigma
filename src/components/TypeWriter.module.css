@@ -1,0 +1,45 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.textXl {
+  font-size: 60px;
+}
+
+.textGreen {
+  color: #b0cb48;
+  opacity: 0.8;
+  animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 0.5s; /* Adjust duration as needed */
+}
+
+.fade-out {
+  animation-name: fadeOut;
+  animation-duration: 0.5s; /* Adjust duration as needed */
+}
+
+@media (max-width: 768px) {
+	.textGreen {
+	}
+	.textXl {
+		font-size: 34px;
+	}
+}
