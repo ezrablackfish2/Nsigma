@@ -20,8 +20,8 @@ const routes = [
     link: "/#casestudy",
   },
   {
-    name: "About Us",
-    link: "/#about",
+    name: "FAQs",
+    link: "/frequent-questions",
   },
   {
     name: "Contact Us",

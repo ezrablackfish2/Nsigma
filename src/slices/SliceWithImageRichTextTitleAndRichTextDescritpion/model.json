@@ -1,8 +1,8 @@
 {
-  "id": "slice4",
+  "id": "slice3",
   "type": "SharedSlice",
-  "name": "Slice4",
-  "description": "Slice4",
+  "name": "SliceWithImageRichTextTitleAndRichTextDescritpion",
+  "description": "Slice3",
   "variations": [
     {
       "id": "default",
@@ -23,17 +23,19 @@
         "title": {
           "type": "StructuredText",
           "config": {
-            "label": "title",
+            "label": "Title",
             "placeholder": "",
             "allowTargetBlank": true,
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "text": {
-          "type": "Text",
+        "rich_text": {
+          "type": "StructuredText",
           "config": {
-            "label": "text",
-            "placeholder": ""
+            "label": "rich text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       },

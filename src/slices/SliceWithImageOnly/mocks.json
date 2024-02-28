@@ -3,17 +3,17 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"slice_1_image": {
+			"image": {
 				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
-					"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-					"width": 8640,
-					"height": 8640
+					"url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+					"width": 4000,
+					"height": 4000
 				},
-				"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-				"width": 8640,
-				"height": 8640,
+				"url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+				"width": 4000,
+				"height": 4000,
 				"edit": {
 					"zoom": 1,
 					"crop": {

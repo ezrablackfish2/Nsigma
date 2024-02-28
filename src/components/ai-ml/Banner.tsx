@@ -1,4 +1,5 @@
 import CustomLink from "../CustomLink";
+import Link from "next/link"
 
 export default function Banner({ content }: any) {
   return (
@@ -15,9 +16,9 @@ export default function Banner({ content }: any) {
                   </span>
                 </h1>
               </div>
-              <CustomLink href="/contact-us" className="max-w-xs font-normal">
+              <Link href="/contact-us" className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal" style={{fontWeight: '999', padding: '20px', fontSize: '25px'}}>
                 Get started
-              </CustomLink>
+              </Link>
             </div>
           </div>
         </div>

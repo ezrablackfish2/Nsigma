@@ -4,12 +4,14 @@ import dynamic from "next/dynamic";
 
 export const components = {
   cta: dynamic(() => import("./CallToAction")),
-  multiple_slice: dynamic(() => import("./MultipleSlice")),
+  multiple_slice: dynamic(() => import("./MultipleSliceWithLinkAndLabel")),
   navigation_slice: dynamic(() => import("./NavigationSlice")),
-  slice1: dynamic(() => import("./Slice1")),
-  slice2: dynamic(() => import("./Slice2")),
-  slice3: dynamic(() => import("./Slice3")),
-  slice4: dynamic(() => import("./Slice4")),
+  slice1: dynamic(() => import("./SliceWithImageOnly")),
+  slice2: dynamic(() => import("./SliceWithImageAndRichTextTitle")),
+  slice3: dynamic(
+    () => import("./SliceWithImageRichTextTitleAndRichTextDescritpion"),
+  ),
+  slice4: dynamic(() => import("./SliceWithImageRichTextTitleAndNormalText")),
   text_with_image: dynamic(() => import("./TextWithImage")),
   title_with_analytics: dynamic(() => import("./Features")),
   title_with_button: dynamic(() => import("./Hero")),

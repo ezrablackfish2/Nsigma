@@ -1,11 +1,13 @@
 import { PrismicRichText } from "@prismicio/react";
 import CustomLink from "@/components/CustomLink";
+import Link from "next/link"
 
 const TitleWithButton = ({ slice }) => {
-  const { title, video, button } = slice.primary;
+	const { title, video, button } = slice.primary;
+	const Id = title[0]?.text;
 
   return (
-    <section className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-20">
+    <section id={Id} className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-20">
       <div className="relative z-30 text-2xl bg-opacity-50 rounded-xl">
         <div className="flex items-center justify-center bg-black/30 w-screen h-screen">
           <div className="container h-full w-full flex gap-4 px-4 justify-center items-center flex-col">
@@ -13,12 +15,13 @@ const TitleWithButton = ({ slice }) => {
               <PrismicRichText field={title} />
             </div>
 
-            <CustomLink
+            <Link
               href={button?.url || "#"}
-              className="max-w-xs font-normal"
+              className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal"
+	      style={{fontWeight: '999', padding: '20px', fontSize: '25px'}}
             >
               Get started
-            </CustomLink>
+            </Link>
           </div>
         </div>
       </div>

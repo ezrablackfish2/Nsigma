@@ -1,7 +1,7 @@
 {
   "id": "slice2",
   "type": "SharedSlice",
-  "name": "Slice2",
+  "name": "SliceWithImageAndRichTextTitle",
   "description": "Slice2",
   "variations": [
     {
@@ -12,10 +12,10 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "slice_2_image": {
+        "image": {
           "type": "Image",
           "config": {
-            "label": "slice 2 image",
+            "label": "image",
             "constraint": {},
             "thumbnails": []
           }

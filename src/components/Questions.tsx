@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Variants, motion, useAnimation } from "framer-motion";
 import CustomLink from "./CustomLink";
+import Link from "next/link"
 
 const variantsLeft: Variants = {
   initial: {
@@ -107,9 +108,11 @@ function Questions({ data }: QuestionsProps) {
         : Your New Friend To Help You Outperform Competitors with Custom AI and
         Data Solutions
       </h2>
-      <CustomLink href="/contact-us" className="font-semibold text-lg my-5">
+      <Link href="/contact-us" 
+      	      className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal"
+	      style={{fontWeight: '999', padding: '20px', fontSize: '25px'}}>
         Get Started
-      </CustomLink>
+      </Link>
       <div className="overflow-hidden relative">
         <span className="opacity-0">{data[offset].title}</span>
         <motion.div

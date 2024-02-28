@@ -738,11 +738,26 @@ type CtaSliceVariation = CtaSliceDefault;
 export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
 
 /**
- * Primary content in *MultipleSlice → Items*
+ * Primary content in *MultipleSliceWithLinkAndLabel → Primary*
+ */
+export interface MultipleSliceSliceDefaultPrimary {
+  /**
+   * title field in *MultipleSliceWithLinkAndLabel → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: multiple_slice.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *MultipleSliceWithLinkAndLabel → Items*
  */
 export interface MultipleSliceSliceDefaultItem {
   /**
-   * Link field in *MultipleSlice → Items*
+   * Link field in *MultipleSliceWithLinkAndLabel → Items*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -752,7 +767,7 @@ export interface MultipleSliceSliceDefaultItem {
   link: prismic.LinkField;
 
   /**
-   * Title field in *MultipleSlice → Items*
+   * Title field in *MultipleSliceWithLinkAndLabel → Items*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -763,7 +778,7 @@ export interface MultipleSliceSliceDefaultItem {
 }
 
 /**
- * Default variation for MultipleSlice Slice
+ * Default variation for MultipleSliceWithLinkAndLabel Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -771,17 +786,17 @@ export interface MultipleSliceSliceDefaultItem {
  */
 export type MultipleSliceSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<MultipleSliceSliceDefaultPrimary>,
   Simplify<MultipleSliceSliceDefaultItem>
 >;
 
 /**
- * Slice variation for *MultipleSlice*
+ * Slice variation for *MultipleSliceWithLinkAndLabel*
  */
 type MultipleSliceSliceVariation = MultipleSliceSliceDefault;
 
 /**
- * MultipleSlice Shared Slice
+ * MultipleSliceWithLinkAndLabel Shared Slice
  *
  * - **API ID**: `multiple_slice`
  * - **Description**: MultipleSlice
@@ -848,22 +863,22 @@ export type NavigationSliceSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Slice1 → Primary*
+ * Primary content in *SliceWithImageOnly → Primary*
  */
 export interface Slice1SliceDefaultPrimary {
   /**
-   * slice 1 image field in *Slice1 → Primary*
+   * slice 1 image field in *SliceWithImageOnly → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: slice1.primary.slice_1_image
+   * - **API ID Path**: slice1.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  slice_1_image: prismic.ImageField<never>;
+  image: prismic.ImageField<never>;
 }
 
 /**
- * Default variation for Slice1 Slice
+ * Default variation for SliceWithImageOnly Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -876,12 +891,12 @@ export type Slice1SliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Slice1*
+ * Slice variation for *SliceWithImageOnly*
  */
 type Slice1SliceVariation = Slice1SliceDefault;
 
 /**
- * Slice1 Shared Slice
+ * SliceWithImageOnly Shared Slice
  *
  * - **API ID**: `slice1`
  * - **Description**: Slice1
@@ -890,21 +905,21 @@ type Slice1SliceVariation = Slice1SliceDefault;
 export type Slice1Slice = prismic.SharedSlice<"slice1", Slice1SliceVariation>;
 
 /**
- * Primary content in *Slice2 → Primary*
+ * Primary content in *SliceWithImageAndRichTextTitle → Primary*
  */
 export interface Slice2SliceDefaultPrimary {
   /**
-   * slice 2 image field in *Slice2 → Primary*
+   * image field in *SliceWithImageAndRichTextTitle → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: slice2.primary.slice_2_image
+   * - **API ID Path**: slice2.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  slice_2_image: prismic.ImageField<never>;
+  image: prismic.ImageField<never>;
 
   /**
-   * Title field in *Slice2 → Primary*
+   * Title field in *SliceWithImageAndRichTextTitle → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -915,7 +930,7 @@ export interface Slice2SliceDefaultPrimary {
 }
 
 /**
- * Default variation for Slice2 Slice
+ * Default variation for SliceWithImageAndRichTextTitle Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -928,12 +943,12 @@ export type Slice2SliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Slice2*
+ * Slice variation for *SliceWithImageAndRichTextTitle*
  */
 type Slice2SliceVariation = Slice2SliceDefault;
 
 /**
- * Slice2 Shared Slice
+ * SliceWithImageAndRichTextTitle Shared Slice
  *
  * - **API ID**: `slice2`
  * - **Description**: Slice2
@@ -942,11 +957,11 @@ type Slice2SliceVariation = Slice2SliceDefault;
 export type Slice2Slice = prismic.SharedSlice<"slice2", Slice2SliceVariation>;
 
 /**
- * Primary content in *Slice3 → Primary*
+ * Primary content in *SliceWithImageRichTextTitleAndRichTextDescritpion → Primary*
  */
 export interface Slice3SliceDefaultPrimary {
   /**
-   * image field in *Slice3 → Primary*
+   * image field in *SliceWithImageRichTextTitleAndRichTextDescritpion → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -956,7 +971,7 @@ export interface Slice3SliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Title field in *Slice3 → Primary*
+   * Title field in *SliceWithImageRichTextTitleAndRichTextDescritpion → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -966,7 +981,7 @@ export interface Slice3SliceDefaultPrimary {
   title: prismic.RichTextField;
 
   /**
-   * rich text field in *Slice3 → Primary*
+   * rich text field in *SliceWithImageRichTextTitleAndRichTextDescritpion → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -977,7 +992,7 @@ export interface Slice3SliceDefaultPrimary {
 }
 
 /**
- * Default variation for Slice3 Slice
+ * Default variation for SliceWithImageRichTextTitleAndRichTextDescritpion Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -990,12 +1005,12 @@ export type Slice3SliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Slice3*
+ * Slice variation for *SliceWithImageRichTextTitleAndRichTextDescritpion*
  */
 type Slice3SliceVariation = Slice3SliceDefault;
 
 /**
- * Slice3 Shared Slice
+ * SliceWithImageRichTextTitleAndRichTextDescritpion Shared Slice
  *
  * - **API ID**: `slice3`
  * - **Description**: Slice3
@@ -1004,11 +1019,11 @@ type Slice3SliceVariation = Slice3SliceDefault;
 export type Slice3Slice = prismic.SharedSlice<"slice3", Slice3SliceVariation>;
 
 /**
- * Primary content in *Slice4 → Primary*
+ * Primary content in *SliceWithImageRichTextTitleAndNormalText → Primary*
  */
 export interface Slice4SliceDefaultPrimary {
   /**
-   * image field in *Slice4 → Primary*
+   * image field in *SliceWithImageRichTextTitleAndNormalText → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -1018,7 +1033,7 @@ export interface Slice4SliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * title field in *Slice4 → Primary*
+   * title field in *SliceWithImageRichTextTitleAndNormalText → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -1028,7 +1043,7 @@ export interface Slice4SliceDefaultPrimary {
   title: prismic.RichTextField;
 
   /**
-   * text field in *Slice4 → Primary*
+   * text field in *SliceWithImageRichTextTitleAndNormalText → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1039,7 +1054,7 @@ export interface Slice4SliceDefaultPrimary {
 }
 
 /**
- * Default variation for Slice4 Slice
+ * Default variation for SliceWithImageRichTextTitleAndNormalText Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1052,12 +1067,12 @@ export type Slice4SliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Slice4*
+ * Slice variation for *SliceWithImageRichTextTitleAndNormalText*
  */
 type Slice4SliceVariation = Slice4SliceDefault;
 
 /**
- * Slice4 Shared Slice
+ * SliceWithImageRichTextTitleAndNormalText Shared Slice
  *
  * - **API ID**: `slice4`
  * - **Description**: Slice4
@@ -1859,6 +1874,7 @@ declare module "@prismicio/client" {
       CtaSliceVariation,
       CtaSliceDefault,
       MultipleSliceSlice,
+      MultipleSliceSliceDefaultPrimary,
       MultipleSliceSliceDefaultItem,
       MultipleSliceSliceVariation,
       MultipleSliceSliceDefault,

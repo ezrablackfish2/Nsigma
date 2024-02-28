@@ -1,7 +1,7 @@
 {
   "id": "slice1",
   "type": "SharedSlice",
-  "name": "Slice1",
+  "name": "SliceWithImageOnly",
   "description": "Slice1",
   "variations": [
     {
@@ -12,7 +12,7 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "slice_1_image": {
+        "image": {
           "type": "Image",
           "config": {
             "label": "slice 1 image",
